@@ -12,7 +12,7 @@
 const output = fs.createWriteStream('./stdout.log');
 const errorOutput = fs.createWriteStream('./stderr.log');
 // 自定义的简单记录器
-const logger = new Console(output, errorOutput);
+const logger = new console.Console(output, errorOutput);
 // 像 console 一样使用
 const count = 5;
 logger.log('count: %d', count);
