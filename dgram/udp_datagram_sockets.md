@@ -29,3 +29,12 @@ server.bind(41234);
 // 服务器监听 0.0.0.0:41234
 ```
 
+------------------------------------------------------------------------------------------------------------
+// 测试程序
+const dgram = require('dgram');
+const client = dgram.createSocket('udp4');
+client.on('close',() => {
+        console.log('socket close');
+});
+ 
+client.send(`这是一个测试信息`,41234,'127.0.0.1');
